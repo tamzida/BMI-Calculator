@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+      
+        
+            <div class="intro">
+            <h1>Adult BMI Calculator.</h1>
+            <h4>Take a look if you are healthy, otherwise you can seek medical care if necessary.</h4>
+            </div>
+            
+            <!-- Asking for data input-->
+            <form>
+            <div class="input-field">
+            <h3>Enter your weight (kg):</h3>
+            <input type="number"  id="weight" placeholder = "55">
+            <b>kg.</b>
+            <br>
+            <h3>Enter you height (ft and in):</h3>
+            <input type="number" id="heightft" placeholder = "6">
+            <b>ft.</b>
+             
+            <p class="small"><input type="range" min="0" max="11" value="3" step="1"  id="heightin" style="width:90px;" oninput="Slider()" onchange="Slider()">
+            <b><label id="heightin_op">3 </label> in.</b></p>
+           
+            <button type="button"
+            onclick="BMICalculate()">
+            Calculate
+            </button>
+            <button type="button"
+            onclick="Clear()">
+            Clear
+            </button>
+             </div>
+            </form>
+             
+            <!-- Displaying BMI value and providing necessary instructions -->
+            <div class="res">
+            <h3 id ="p">Your BMI: <label id="BMI"></label></h3>
+            <h3><label id="DESC"></label></h3>
+            </div>
+            
+            
+    <script src="script.js"></script>
+</body>
+
+</html>
